@@ -9,12 +9,45 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var dataFetchService = DataFetcherService()
+    
+    var tableView = UITableView()
+    
+    var model: Model?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let tableView = UITableView(frame: view.frame, style: .plain)
+        view.addSubview(tableView)
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        tableView
+        
+        dataFetchService.fetchGames { (model) in
+            self.model = model
+            tableView.reloadData()
+        }
     }
+}
 
-
+extension ViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return model?.feed.results.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.numberOfLines = 0
+        if let model = model {
+            cell.textLabel?.text = model.feed.results[indexPath.row].name
+        }
+        return cell
+    }
+    
+    
 }
 
