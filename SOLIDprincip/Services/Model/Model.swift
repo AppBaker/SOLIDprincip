@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 struct Model: Decodable {
     var feed: Feed
 }

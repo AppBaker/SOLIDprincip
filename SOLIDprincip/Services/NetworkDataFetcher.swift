@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 protocol DataFetcher {
     func fetchGenericJSONData<T: Decodable>(urlString: String, completion: @escaping (T?) -> Void)
 }

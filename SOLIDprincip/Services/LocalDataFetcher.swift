@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class LocalDataFetcher: NetworkDataFetcher {
     
     override func fetchGenericJSONData<T>(urlString: String, completion: @escaping (T?) -> Void) where T : Decodable {

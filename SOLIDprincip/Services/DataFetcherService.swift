@@ -8,7 +8,9 @@
 
 import Foundation
 
+
 class DataFetcherService {
+    
     
     var networkDatataFetcher: DataFetcher
     var localDataFetcher: DataFetcher
