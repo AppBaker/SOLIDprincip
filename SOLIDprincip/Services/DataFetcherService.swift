@@ -10,15 +10,31 @@ import Foundation
 
 class DataFetcherService {
     
-    var datataFetcher: DataFetcher
+    var networkDatataFetcher: DataFetcher
+    var localDataFetcher: DataFetcher
     
-    init(datataFetcher: DataFetcher = NetworkDataFetcher()) {
-        self.datataFetcher = datataFetcher
+    init(networkDatataFetcher: DataFetcher = NetworkDataFetcher(), localDataFetcher: DataFetcher = LocalDataFetcher()) {
+        self.networkDatataFetcher = networkDatataFetcher
+        self.localDataFetcher = localDataFetcher
     }
     
     func fetchGames(completion: @escaping (Model?) -> Void) {
         let urlString = "https://rss.itunes.apple.com/api/v1/ru/books/top-free/all/10/non-explicit.json"
-        datataFetcher.fetchGenericJSONData(urlString: urlString, completion: completion)
+        networkDatataFetcher.fetchGenericJSONData(urlString: urlString, completion: completion)
     }
+    
+    func fetchSolid(completion: @escaping (Sumple?) -> Void) {
+        networkDatataFetcher.fetchGenericJSONData(urlString: "", completion: completion)
+    }
+    
+    func fetchLocalData (completion: @escaping (Model?) -> Void) {
+        let urlString = "non-explicit.json"
+        localDataFetcher.fetchGenericJSONData(urlString: urlString, completion: completion)
+    }
+    
+}
+
+struct Sumple: Decodable {
+    var name: String
 }
 

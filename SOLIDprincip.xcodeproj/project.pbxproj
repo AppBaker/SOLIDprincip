@@ -17,6 +17,8 @@
 		9931F82223FA92A4003B35CB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9931F82123FA92A4003B35CB /* Model.swift */; };
 		9931F82523FA967E003B35CB /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9931F82423FA967E003B35CB /* NetworkDataFetcher.swift */; };
 		9931F82723FB931A003B35CB /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9931F82623FB931A003B35CB /* DataFetcherService.swift */; };
+		9931F82923FD23E6003B35CB /* LocalDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9931F82823FD23E6003B35CB /* LocalDataFetcher.swift */; };
+		9931F82B23FD390C003B35CB /* non-explicit.json in Resources */ = {isa = PBXBuildFile; fileRef = 9931F82A23FD390C003B35CB /* non-explicit.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		9931F82123FA92A4003B35CB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9931F82423FA967E003B35CB /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		9931F82623FB931A003B35CB /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
+		9931F82823FD23E6003B35CB /* LocalDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataFetcher.swift; sourceTree = "<group>"; };
+		9931F82A23FD390C003B35CB /* non-explicit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "non-explicit.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 				9931F81323FA911E003B35CB /* Assets.xcassets */,
 				9931F81523FA911E003B35CB /* LaunchScreen.storyboard */,
 				9931F81823FA911E003B35CB /* Info.plist */,
+				9931F82A23FD390C003B35CB /* non-explicit.json */,
 				9931F82023FA9277003B35CB /* Services */,
 			);
 			path = SOLIDprincip;
@@ -82,6 +87,7 @@
 				9931F82323FA92A9003B35CB /* Model */,
 				9931F81E23FA9264003B35CB /* NetworkService.swift */,
 				9931F82423FA967E003B35CB /* NetworkDataFetcher.swift */,
+				9931F82823FD23E6003B35CB /* LocalDataFetcher.swift */,
 				9931F82623FB931A003B35CB /* DataFetcherService.swift */,
 			);
 			path = Services;
@@ -156,6 +162,7 @@
 				9931F81723FA911E003B35CB /* LaunchScreen.storyboard in Resources */,
 				9931F81423FA911E003B35CB /* Assets.xcassets in Resources */,
 				9931F81223FA9118003B35CB /* Main.storyboard in Resources */,
+				9931F82B23FD390C003B35CB /* non-explicit.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +180,7 @@
 				9931F80B23FA9118003B35CB /* AppDelegate.swift in Sources */,
 				9931F81F23FA9264003B35CB /* NetworkService.swift in Sources */,
 				9931F80D23FA9118003B35CB /* SceneDelegate.swift in Sources */,
+				9931F82923FD23E6003B35CB /* LocalDataFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

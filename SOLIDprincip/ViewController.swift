@@ -24,9 +24,8 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        tableView
         
-        dataFetchService.fetchGames { (model) in
+        dataFetchService.fetchLocalData {(model) in
             self.model = model
             tableView.reloadData()
         }
